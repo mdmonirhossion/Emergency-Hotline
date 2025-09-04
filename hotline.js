@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Call History Section
   function addCallToHistory(name, number) {
     const callTime = new Date();
-    const timeString = callTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+    const timeString = callTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
 
     const historyItem = document.createElement('div');
     historyItem.className = 'flex justify-between items-center text-sm p-2 bg-gray-50 rounded-lg';
