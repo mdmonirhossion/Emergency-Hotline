@@ -5,14 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emergency Hotline</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 
 </head>
@@ -35,15 +34,14 @@
         <div class="flex items-center gap-2 sm:gap-3 flex-wrap justify-end">
 
           <div class="bg-[#b9efc5] rounded-lg h-9 sm:h-10 px-2 sm:px-3 flex items-center justify-center shrink-0">
-            <p id="initialLives" class="text-sm sm:text-base">0 <span> </span></p>
-
-           <i class="fa-solid fa-heart pr-2 text-pink-400 ml-1"></i>
+            <p id="initialLives" class="text-sm sm:text-base">0</p>
+            <i class="fa-solid fa-heart pr-2 text-pink-400 ml-1"></i>
           </div>
 
           <div class="bg-[#b9efc5] rounded-lg h-9 sm:h-10 px-2 sm:px-3 flex items-center justify-center shrink-0">
-            <p id="coinCount" class="text-sm sm:text-base">100 <span> </span></p>
-            <i class="fa-brands fa-bitcoin pr-2 text-yellow-400 ml-1"></i>
-
+            <p id="coinCount" class="text-sm sm:text-base">100</p>
+            <i class="fa-solid fa-coins pr-2 text-yellow-500 ml-1"></i>
+            <!-- Changed to fa-solid fa-coins for better representation -->
           </div>
 
           <div
@@ -70,16 +68,15 @@
   </section>
 
   <!-- card section with history-->
-  <div class="flex flex-col lg:flex-row gap-6 px-4 py-6">
-
+  <div class="flex flex-col lg:flex-row gap-6 px-4 py-6 max-w-7xl mx-auto">
     <!-- Cards Section -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
 
-      <!-- card 1 -->
+      <!-- card 1: National Emergency Number -->
       <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
         <div class="flex justify-between items-center h-[50px]">
           <img src="assets/emergency.png" alt="" class="h-8 w-8 object-contain">
-          <i class="fa-regular fa-heart lives"></i>
+          <i class="fa-regular fa-heart lives cursor-pointer"></i>
         </div>
         <div class="pt-3">
           <h1 class="font-bold text-base">National Emergency Number</h1>
@@ -90,17 +87,17 @@
           </div>
           <div class="grid grid-cols-2 gap-2">
             <button class="btn btn-active w-full h-10 copy"><i class="fa-solid fa-copy mr-1"></i>Copy</button>
-            <button class="btn btn-active btn-accent w-full h-10 call"><i
+            <button class="btn btn-active btn-success w-full h-10 call"><i
                 class="fa-solid fa-phone mr-1"></i>Call</button>
           </div>
         </div>
       </div>
 
-      <!-- card 2 -->
+      <!-- card 2: Police Helpline Number -->
       <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
         <div class="flex justify-between items-center h-[50px]">
           <img src="assets/police.png" alt="" class="h-8 w-8 object-contain">
-          <i class="fa-regular fa-heart lives"></i>
+          <i class="fa-regular fa-heart lives cursor-pointer"></i>
         </div>
         <div class="pt-3">
           <h1 class="font-bold text-base">Police Helpline Number</h1>
@@ -111,17 +108,17 @@
           </div>
           <div class="grid grid-cols-2 gap-2">
             <button class="btn btn-active w-full h-10 copy"><i class="fa-solid fa-copy mr-1"></i>Copy</button>
-            <button class="btn btn-active btn-accent w-full h-10 call"><i
+            <button class="btn btn-active btn-success w-full h-10 call"><i
                 class="fa-solid fa-phone mr-1"></i>Call</button>
           </div>
         </div>
       </div>
 
-      <!-- card 3 -->
+      <!-- card 3: Fire Service Number -->
       <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
         <div class="flex justify-between items-center h-[50px]">
           <img src="assets/fire-service.png" alt="" class="h-8 w-8 object-contain">
-          <i class="fa-regular fa-heart lives"></i>
+          <i class="fa-regular fa-heart lives cursor-pointer"></i>
         </div>
         <div class="pt-3">
           <h1 class="font-bold text-base">Fire Service Number</h1>
@@ -132,17 +129,17 @@
           </div>
           <div class="grid grid-cols-2 gap-2">
             <button class="btn btn-active w-full h-10 copy"><i class="fa-solid fa-copy mr-1"></i>Copy</button>
-            <button class="btn btn-active btn-accent w-full h-10 call"><i
+            <button class="btn btn-active btn-success w-full h-10 call"><i
                 class="fa-solid fa-phone mr-1"></i>Call</button>
           </div>
         </div>
       </div>
 
-      <!-- card 4 -->
+      <!-- card 4: Ambulance Service -->
       <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
         <div class="flex justify-between items-center h-[50px]">
           <img src="assets/ambulance.png" alt="" class="h-8 w-8 object-contain">
-          <i class="fa-regular fa-heart lives"></i>
+          <i class="fa-regular fa-heart lives cursor-pointer"></i>
         </div>
         <div class="pt-3">
           <h1 class="font-bold text-base">Ambulance Service</h1>
@@ -153,17 +150,17 @@
           </div>
           <div class="grid grid-cols-2 gap-2">
             <button class="btn btn-active w-full h-10 copy"><i class="fa-solid fa-copy mr-1"></i>Copy</button>
-            <button class="btn btn-active btn-accent w-full h-10 call"><i
+            <button class="btn btn-active btn-success w-full h-10 call"><i
                 class="fa-solid fa-phone mr-1"></i>Call</button>
           </div>
         </div>
       </div>
 
-      <!-- card 5 -->
+      <!-- card 5: Women & Child Helpline -->
       <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
         <div class="flex justify-between items-center h-[50px]">
           <img src="assets/emergency.png" alt="" class="h-8 w-8 object-contain">
-          <i class="fa-regular fa-heart lives"></i>
+          <i class="fa-regular fa-heart lives cursor-pointer"></i>
         </div>
         <div class="pt-3">
           <h1 class="font-bold text-base">Women & Child Helpline</h1>
@@ -174,17 +171,17 @@
           </div>
           <div class="grid grid-cols-2 gap-2">
             <button class="btn btn-active w-full h-10 copy"><i class="fa-solid fa-copy mr-1"></i>Copy</button>
-            <button class="btn btn-active btn-accent w-full h-10 call"><i
+            <button class="btn btn-active btn-success w-full h-10 call"><i
                 class="fa-solid fa-phone mr-1"></i>Call</button>
           </div>
         </div>
       </div>
 
-      <!-- card 6 -->
+      <!-- card 6: Anti-Corruption Helpline -->
       <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
         <div class="flex justify-between items-center h-[50px]">
           <img src="assets/emergency.png" alt="" class="h-8 w-8 object-contain">
-          <i class="fa-regular fa-heart lives"></i>
+          <i class="fa-regular fa-heart lives cursor-pointer"></i>
         </div>
         <div class="pt-3">
           <h1 class="font-bold text-base">Anti-Corruption Helpline</h1>
@@ -195,17 +192,17 @@
           </div>
           <div class="grid grid-cols-2 gap-2">
             <button class="btn btn-active w-full h-10 copy"><i class="fa-solid fa-copy mr-1"></i>Copy</button>
-            <button class="btn btn-active btn-accent w-full h-10 call"><i
+            <button class="btn btn-active btn-success w-full h-10 call"><i
                 class="fa-solid fa-phone mr-1"></i>Call</button>
           </div>
         </div>
       </div>
 
-      <!-- card 7 -->
+      <!-- card 7: Electricity Helpline (NEW, consistent with image and requirements) -->
       <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
         <div class="flex justify-between items-center h-[50px]">
           <img src="assets/emergency.png" alt="" class="h-8 w-8 object-contain">
-          <i class="fa-regular fa-heart lives"></i>
+          <i class="fa-regular fa-heart lives cursor-pointer"></i>
         </div>
         <div class="pt-3">
           <h1 class="font-bold text-base">Electricity Helpline</h1>
@@ -216,17 +213,17 @@
           </div>
           <div class="grid grid-cols-2 gap-2">
             <button class="btn btn-active w-full h-10 copy"><i class="fa-solid fa-copy mr-1"></i>Copy</button>
-            <button class="btn btn-active btn-accent w-full h-10 call"><i
+            <button class="btn btn-active btn-success w-full h-10 call"><i
                 class="fa-solid fa-phone mr-1"></i>Call</button>
           </div>
         </div>
       </div>
 
-      <!-- card 8 -->
+      <!-- card 8: Brac Helpline (NEW, consistent with image and requirements) -->
       <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
         <div class="flex justify-between items-center h-[50px]">
           <img src="assets/brac.png" alt="" class="h-8 w-8 object-contain">
-          <i class="fa-regular fa-heart lives"></i>
+          <i class="fa-regular fa-heart lives cursor-pointer"></i>
         </div>
         <div class="pt-3">
           <h1 class="font-bold text-base">Brac Helpline</h1>
@@ -237,17 +234,17 @@
           </div>
           <div class="grid grid-cols-2 gap-2">
             <button class="btn btn-active w-full h-10 copy"><i class="fa-solid fa-copy mr-1"></i>Copy</button>
-            <button class="btn btn-active btn-accent w-full h-10 call"><i
+            <button class="btn btn-active btn-success w-full h-10 call"><i
                 class="fa-solid fa-phone mr-1"></i>Call</button>
           </div>
         </div>
       </div>
 
-      <!-- card 9 -->
+      <!-- card 9: Bangladesh Railway Helpline (NEW, consistent with image and requirements) -->
       <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-4 min-h-[260px]">
         <div class="flex justify-between items-center h-[50px]">
           <img src="assets/emergency.png" alt="" class="h-8 w-8 object-contain">
-          <i class="fa-regular fa-heart lives"></i>
+          <i class="fa-regular fa-heart lives cursor-pointer"></i>
         </div>
         <div class="pt-3">
           <h1 class="font-bold text-base">Bangladesh Railway Helpline</h1>
@@ -258,7 +255,7 @@
           </div>
           <div class="grid grid-cols-2 gap-2">
             <button class="btn btn-active w-full h-10 copy"><i class="fa-solid fa-copy mr-1"></i>Copy</button>
-            <button class="btn btn-active btn-accent w-full h-10 call"><i
+            <button class="btn btn-active btn-success w-full h-10 call"><i
                 class="fa-solid fa-phone mr-1 "></i>Call</button>
           </div>
         </div>
@@ -277,7 +274,9 @@
       </div>
 
       <!-- fills available height; scrollbar appears only after content exceeds -->
-      <div id="historyList" class="space-y-2 flex-1 min-h-0 overflow-y-auto"></div>
+      <div id="historyList" class="space-y-2 flex-1 min-h-0 overflow-y-auto">
+        <!-- Call history items will be dynamically added here -->
+      </div>
     </div>
   </div>
 
